@@ -1,0 +1,13 @@
+{
+  "name": "NodeJsApp",
+  "version": "0.0.0",
+  "description": "NodeJsApp",
+  "main": "server.js",
+  "author": {
+    "name": "Karlkim.Suwanmongkol",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "~4.0.0"
+  }
+}

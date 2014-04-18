@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Talk to Node Server (NodejsApp1)</title>
+    <script src="../Scripts/angular.min.js"></script>
+    <script>
+        function ShoppingController($scope, $http) {
+            $http.get('http://localhost:1337/products').success(function (data, status, headers, config) {
+                $scope.items = data;
+            });
+        }
+    </script>
+</head>
+<body ng-controller="ShoppingController">
+    <h1>Shop!</h1>
+    <table>
+        <tr ng-repeat="item in items">
+            <td>{{item.title}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price | currency}}</td>
+        </tr>
+    </table>
+</body>
+</html>
